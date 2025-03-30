@@ -9,7 +9,7 @@ import java.util.List;
  * @see ArrayList
  * @see List
  */
-public class Library {
+public class Library implements Iterable <Book>{
     /**
      * The collection of books in the library.
      * This is defined using the list interface to allow for flexibility in the implementation.
@@ -54,6 +54,18 @@ public class Library {
     public void printBooks() {
         for (Book book : books) {
             System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor());
+        }
+    }
+
+    private class LibraryIterator implements Iterator<Book> {
+        @Override
+        public boolean hasNext() {
+
+        }
+
+        @Override
+        public Book next() {
+            
         }
     }
 }
